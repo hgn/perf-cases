@@ -1,7 +1,7 @@
 include ../perf-cases.mk
 
-OBJS=matrix-mult.o
-CFLAGS_LOCAL= 
+OBJS = matrix-mult.o
+CFLAGS_LOCAL = 
 
 all: matrix-mult
 
