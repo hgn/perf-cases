@@ -3,13 +3,13 @@ include ../perf-cases.mk
 OBJS=matrix-mult.o
 CFLAGS_LOCAL= 
 
-all: cache-miss
+all: matrix-mult
 
-cache-miss: $(OBJS)
+matrix-mult: $(OBJS)
 	gcc -o $@ $(OBJS)
 
 .c.o::
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(INC_LOCAL) $(INC_DIRS) $< -o $@
 
 clean:
-	@rm -rf $(OBJS) cache-miss
+	@rm -rf $(OBJS) matrix-mult
